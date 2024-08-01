@@ -1,0 +1,55 @@
+<h2 class="pt-2 text-center">Update Recipe : {{recipeItem.id}}</h2>
+<form (ngSubmit)="handleUpdateRecipe()" class="w-[27rem] p-6 rounded-lg shadow-md">
+    <div class="mb-4">
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label class="text-gray-200">Title</mat-label>
+        <input
+          matInput
+          placeholder="Title"
+          [(ngModel)]="recipeItem.title"
+          name="title"
+          class="py-2 px-3 text-gray-200 mt-1 leading-tight focus:outline-none focus:shadow-outline"/>
+      </mat-form-field>
+    </div>
+  
+    <div class="mb-4">
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label class="text-gray-200">Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Description"
+          [(ngModel)]="recipeItem.description"
+          name="description"
+          class="py-2 px-3 text-gray-200 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+        </textarea>
+      </mat-form-field>
+    </div>
+  
+    <div class="mb-4">
+      <mat-radio-group [(ngModel)]="recipeItem.foodType" name="foodType" aria-label="Food Type">
+          <mat-radio-button value="veg">Vegetarian</mat-radio-button>
+          <mat-radio-button value="non_veg">Non Vegetarian</mat-radio-button>
+        </mat-radio-group>
+    </div>
+  
+    <div class="mb-4">
+      <mat-form-field class="w-full" appearance="fill">
+        <mat-label class="text-gray-200">Image URL</mat-label>
+        <input
+          matInput
+          placeholder="Image URL"
+          [(ngModel)]="recipeItem.image"
+          name="image"
+          class="py-2 px-3 text-gray-200 mt-1 leading-tight focus:outline-none focus:shadow-outline"/>
+      </mat-form-field>
+    </div>
+  
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      class="">
+      Update
+    </button>
+  </form>
+  

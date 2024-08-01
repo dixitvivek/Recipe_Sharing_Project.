@@ -1,0 +1,24 @@
+<p>
+  <mat-toolbar class="flex justify-between" color="primary">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button> -->
+    <span class="">Recipe Share Hub</span>
+
+    <div class="flex items-center gap-2">
+      <button
+        disabled
+        class="example-icon"
+        aria-label="Example icon-button with share icon">
+        {{ user?.fullName }}
+      </button>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with share icon"
+        (click)="handleLogout()">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar>
+</p>
